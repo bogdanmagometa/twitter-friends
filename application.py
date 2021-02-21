@@ -8,13 +8,16 @@ def index():
     return render_template("index.html")
 
 
-@app.route("/friends")
+@app.route("/friends", methods=['POST'])
 def friends():
-    user_id = request.form.get('user_id')
+    username = request.form.get('username')
 
-    create_map_for_user(user_id)
+    user_exists = create_map_for_user(username)
 
-    return render_template("map.html")
+    if user_exists:
+        return render_template("map.html")
+
+    return render_template('failure.html', username=username)
 
 
 if __name__ == "__main__":

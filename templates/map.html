@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<head>    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_4696e264d6734252b7e6cf801219af06 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+            </style>
+        
+</head>
+<body>    
+    
+            <div class="folium-map" id="map_4696e264d6734252b7e6cf801219af06" ></div>
+        
+</body>
+<script>    
+    
+            var map_4696e264d6734252b7e6cf801219af06 = L.map(
+                "map_4696e264d6734252b7e6cf801219af06",
+                {
+                    center: [0, 0],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 1,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_d27f31e855284f709ebb934f9bdcc323 = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_4696e264d6734252b7e6cf801219af06);
+        
+    
+            var feature_group_7724a59efcf049348e7034e0216cb576 = L.featureGroup(
+                {}
+            ).addTo(map_4696e264d6734252b7e6cf801219af06);
+        
+    
+            var circle_marker_ba69a59f300d46969877e11eb1b4a4be = L.circleMarker(
+                [50.8787702, 4.4162596],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 100, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(feature_group_7724a59efcf049348e7034e0216cb576);
+        
+    
+        var popup_e3f19cc158a7439a844e0d366a32e710 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_21b8659986ea4406830ef4739ca1fb09 = $(`<div id="html_21b8659986ea4406830ef4739ca1fb09" style="width: 100.0%; height: 100.0%;">European Parliament</div>`)[0];
+            popup_e3f19cc158a7439a844e0d366a32e710.setContent(html_21b8659986ea4406830ef4739ca1fb09);
+        
+
+        circle_marker_ba69a59f300d46969877e11eb1b4a4be.bindPopup(popup_e3f19cc158a7439a844e0d366a32e710)
+        ;
+
+        
+    
+    
+            var circle_marker_308e3cb241834529b1941bc6d798ad53 = L.circleMarker(
+                [49.4871968, 31.2718321],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 100, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(feature_group_7724a59efcf049348e7034e0216cb576);
+        
+    
+        var popup_4b3b5723ca3b420d9094a47dac97c66d = L.popup({"maxWidth": "100%"});
+
+        
+            var html_7d1e2e5f74e94a6d9a6b17d0b62803cf = $(`<div id="html_7d1e2e5f74e94a6d9a6b17d0b62803cf" style="width: 100.0%; height: 100.0%;">Європейська Солідарність</div>`)[0];
+            popup_4b3b5723ca3b420d9094a47dac97c66d.setContent(html_7d1e2e5f74e94a6d9a6b17d0b62803cf);
+        
+
+        circle_marker_308e3cb241834529b1941bc6d798ad53.bindPopup(popup_4b3b5723ca3b420d9094a47dac97c66d)
+        ;
+
+        
+    
+    
+            var circle_marker_888a22a09c814c46a5dc0acd426cc970 = L.circleMarker(
+                [50.8465573, 4.351697],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 100, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(feature_group_7724a59efcf049348e7034e0216cb576);
+        
+    
+        var popup_36305c1c9e9d4bfe8fb46c5839d0bd46 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_c65a7841fbbd404785501dc0eec30d0a = $(`<div id="html_c65a7841fbbd404785501dc0eec30d0a" style="width: 100.0%; height: 100.0%;">EPP Group</div>`)[0];
+            popup_36305c1c9e9d4bfe8fb46c5839d0bd46.setContent(html_c65a7841fbbd404785501dc0eec30d0a);
+        
+
+        circle_marker_888a22a09c814c46a5dc0acd426cc970.bindPopup(popup_36305c1c9e9d4bfe8fb46c5839d0bd46)
+        ;
+
+        
+    
+    
+            var circle_marker_5c516fba7d41484cbcc0f8a5be32223b = L.circleMarker(
+                [39.7459468, -75.546589],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 100, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(feature_group_7724a59efcf049348e7034e0216cb576);
+        
+    
+        var popup_2e292298edd54b98baac585799ba4f92 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_b29bc0bd259a4ca8b49902969f83c50c = $(`<div id="html_b29bc0bd259a4ca8b49902969f83c50c" style="width: 100.0%; height: 100.0%;">Joe Biden</div>`)[0];
+            popup_2e292298edd54b98baac585799ba4f92.setContent(html_b29bc0bd259a4ca8b49902969f83c50c);
+        
+
+        circle_marker_5c516fba7d41484cbcc0f8a5be32223b.bindPopup(popup_2e292298edd54b98baac585799ba4f92)
+        ;
+
+        
+    
+    
+            var circle_marker_5f3e846b3f16457981d2308a36930132 = L.circleMarker(
+                [31.5313113, 34.8667654],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 100, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(feature_group_7724a59efcf049348e7034e0216cb576);
+        
+    
+        var popup_492a89956a9c4e448a41aa062bdd71f7 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_9be1547c7f3347eabbc8dc906c739bac = $(`<div id="html_9be1547c7f3347eabbc8dc906c739bac" style="width: 100.0%; height: 100.0%;">Benjamin Netanyahu</div>`)[0];
+            popup_492a89956a9c4e448a41aa062bdd71f7.setContent(html_9be1547c7f3347eabbc8dc906c739bac);
+        
+
+        circle_marker_5f3e846b3f16457981d2308a36930132.bindPopup(popup_492a89956a9c4e448a41aa062bdd71f7)
+        ;
+
+        
+    
+    
+            var circle_marker_1933b4095cd9498b9d02735e19d52050 = L.circleMarker(
+                [36.7014631, -118.755997],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 100, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(feature_group_7724a59efcf049348e7034e0216cb576);
+        
+    
+        var popup_20e2b33050544a3884c1e492c6c6d2fa = L.popup({"maxWidth": "100%"});
+
+        
+            var html_af4bc1ebdeeb4e7fb2b1b8c47ecdf39a = $(`<div id="html_af4bc1ebdeeb4e7fb2b1b8c47ecdf39a" style="width: 100.0%; height: 100.0%;">Kamala Harris</div>`)[0];
+            popup_20e2b33050544a3884c1e492c6c6d2fa.setContent(html_af4bc1ebdeeb4e7fb2b1b8c47ecdf39a);
+        
+
+        circle_marker_1933b4095cd9498b9d02735e19d52050.bindPopup(popup_20e2b33050544a3884c1e492c6c6d2fa)
+        ;
+
+        
+    
+    
+            var circle_marker_b110b95cf16b4464995924f8782eb0b4 = L.circleMarker(
+                [54.7023545, -3.2765753],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 100, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(feature_group_7724a59efcf049348e7034e0216cb576);
+        
+    
+        var popup_2a1e198cb5f149c2b99a807e025fb527 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_30de1479ebda49aab4d7be74a9dcf4b3 = $(`<div id="html_30de1479ebda49aab4d7be74a9dcf4b3" style="width: 100.0%; height: 100.0%;">Boris Johnson</div>`)[0];
+            popup_2a1e198cb5f149c2b99a807e025fb527.setContent(html_30de1479ebda49aab4d7be74a9dcf4b3);
+        
+
+        circle_marker_b110b95cf16b4464995924f8782eb0b4.bindPopup(popup_2a1e198cb5f149c2b99a807e025fb527)
+        ;
+
+        
+    
+    
+            var circle_marker_6a6b98498e634e719b96545fb3eca114 = L.circleMarker(
+                [-35.2975906, 149.1012676],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 100, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(feature_group_7724a59efcf049348e7034e0216cb576);
+        
+    
+        var popup_368856a769ee46adab71af872e32762b = L.popup({"maxWidth": "100%"});
+
+        
+            var html_007a93adc1184b19bd73dec48dab25cb = $(`<div id="html_007a93adc1184b19bd73dec48dab25cb" style="width: 100.0%; height: 100.0%;">Scott Morrison</div>`)[0];
+            popup_368856a769ee46adab71af872e32762b.setContent(html_007a93adc1184b19bd73dec48dab25cb);
+        
+
+        circle_marker_6a6b98498e634e719b96545fb3eca114.bindPopup(popup_368856a769ee46adab71af872e32762b)
+        ;
+
+        
+    
+    
+            var circle_marker_fd1c30f81e0e4d8d89a9a8f810d2cd1e = L.circleMarker(
+                [50.8465573, 4.351697],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 100, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(feature_group_7724a59efcf049348e7034e0216cb576);
+        
+    
+        var popup_150a8fb8761648dcb48591ea29571c09 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_3e8a9755a7154ab3b06087b92c203a4b = $(`<div id="html_3e8a9755a7154ab3b06087b92c203a4b" style="width: 100.0%; height: 100.0%;">Donald Tusk</div>`)[0];
+            popup_150a8fb8761648dcb48591ea29571c09.setContent(html_3e8a9755a7154ab3b06087b92c203a4b);
+        
+
+        circle_marker_fd1c30f81e0e4d8d89a9a8f810d2cd1e.bindPopup(popup_150a8fb8761648dcb48591ea29571c09)
+        ;
+
+        
+    
+    
+            var circle_marker_5e9079d367a84329956f78c88d0da992 = L.circleMarker(
+                [50.8465573, 4.351697],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 100, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(feature_group_7724a59efcf049348e7034e0216cb576);
+        
+    
+        var popup_91d6e29514ce49d785f1815af1ad4386 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_6bd5b400f34a48c38e07c6379055e1fd = $(`<div id="html_6bd5b400f34a48c38e07c6379055e1fd" style="width: 100.0%; height: 100.0%;">Donald Tusk</div>`)[0];
+            popup_91d6e29514ce49d785f1815af1ad4386.setContent(html_6bd5b400f34a48c38e07c6379055e1fd);
+        
+
+        circle_marker_5e9079d367a84329956f78c88d0da992.bindPopup(popup_91d6e29514ce49d785f1815af1ad4386)
+        ;
+
+        
+    
+    
+            var circle_marker_6eb4a62201c745699be94c4fcf337d73 = L.circleMarker(
+                [49.2608724, -123.1139529],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 100, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(feature_group_7724a59efcf049348e7034e0216cb576);
+        
+    
+        var popup_85793e7092dc4ee083049327676ec5df = L.popup({"maxWidth": "100%"});
+
+        
+            var html_9810942d94d64d8286608335442faf3e = $(`<div id="html_9810942d94d64d8286608335442faf3e" style="width: 100.0%; height: 100.0%;">Harjit Sajjan</div>`)[0];
+            popup_85793e7092dc4ee083049327676ec5df.setContent(html_9810942d94d64d8286608335442faf3e);
+        
+
+        circle_marker_6eb4a62201c745699be94c4fcf337d73.bindPopup(popup_85793e7092dc4ee083049327676ec5df)
+        ;
+
+        
+    
+    
+            var circle_marker_3c0726a03516439c99972bbe503e93a8 = L.circleMarker(
+                [60.3920637, 5.331079],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 100, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(feature_group_7724a59efcf049348e7034e0216cb576);
+        
+    
+        var popup_4b261ca7ea264f4db1d4e6d31da55f5e = L.popup({"maxWidth": "100%"});
+
+        
+            var html_b1f98204881f43068062316f0c5cbf82 = $(`<div id="html_b1f98204881f43068062316f0c5cbf82" style="width: 100.0%; height: 100.0%;">Erna Solberg</div>`)[0];
+            popup_4b261ca7ea264f4db1d4e6d31da55f5e.setContent(html_b1f98204881f43068062316f0c5cbf82);
+        
+
+        circle_marker_3c0726a03516439c99972bbe503e93a8.bindPopup(popup_4b261ca7ea264f4db1d4e6d31da55f5e)
+        ;
+
+        
+    
+    
+            var circle_marker_e0643bf7fce040c087d228bf7092c563 = L.circleMarker(
+                [46.2017559, 6.1466014],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 100, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(feature_group_7724a59efcf049348e7034e0216cb576);
+        
+    
+        var popup_d7f649613221482c81d61d9424b25e9a = L.popup({"maxWidth": "100%"});
+
+        
+            var html_2bc0a3422396444c82fa54db60a87b7d = $(`<div id="html_2bc0a3422396444c82fa54db60a87b7d" style="width: 100.0%; height: 100.0%;">Tedros Adhanom Ghebreyesus</div>`)[0];
+            popup_d7f649613221482c81d61d9424b25e9a.setContent(html_2bc0a3422396444c82fa54db60a87b7d);
+        
+
+        circle_marker_e0643bf7fce040c087d228bf7092c563.bindPopup(popup_d7f649613221482c81d61d9424b25e9a)
+        ;
+
+        
+    
+    
+            var circle_marker_820591107a72465aab26643688bf2077 = L.circleMarker(
+                [54.6870458, 25.2829111],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 100, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(feature_group_7724a59efcf049348e7034e0216cb576);
+        
+    
+        var popup_efc72db7832a401fbbcdb47edd566ffe = L.popup({"maxWidth": "100%"});
+
+        
+            var html_4a59612710b04bdaabf7c5bd6d668b0d = $(`<div id="html_4a59612710b04bdaabf7c5bd6d668b0d" style="width: 100.0%; height: 100.0%;">Gitanas Nausėda</div>`)[0];
+            popup_efc72db7832a401fbbcdb47edd566ffe.setContent(html_4a59612710b04bdaabf7c5bd6d668b0d);
+        
+
+        circle_marker_820591107a72465aab26643688bf2077.bindPopup(popup_efc72db7832a401fbbcdb47edd566ffe)
+        ;
+
+        
+    
+    
+            var circle_marker_e212c437a754490cbe7eb40e81b7fd0f = L.circleMarker(
+                [50.0491699, 1.4175744],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 100, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(feature_group_7724a59efcf049348e7034e0216cb576);
+        
+    
+        var popup_7162bf0da8ad4791ac90133e44b29ac8 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_d35551c45e30478a98139858ff91850b = $(`<div id="html_d35551c45e30478a98139858ff91850b" style="width: 100.0%; height: 100.0%;">Charles Michel</div>`)[0];
+            popup_7162bf0da8ad4791ac90133e44b29ac8.setContent(html_d35551c45e30478a98139858ff91850b);
+        
+
+        circle_marker_e212c437a754490cbe7eb40e81b7fd0f.bindPopup(popup_7162bf0da8ad4791ac90133e44b29ac8)
+        ;
+
+        
+    
+    
+            var circle_marker_b9fb6376cb14411186027efafaed1b4d = L.circleMarker(
+                [56.95096495, 24.10111079866076],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 100, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(feature_group_7724a59efcf049348e7034e0216cb576);
+        
+    
+        var popup_b4b58a280378475db068ac85ba5fbebb = L.popup({"maxWidth": "100%"});
+
+        
+            var html_afe44ca9662e42f1bb607645fb2ef0d3 = $(`<div id="html_afe44ca9662e42f1bb607645fb2ef0d3" style="width: 100.0%; height: 100.0%;">Valsts prezidenta kanceleja</div>`)[0];
+            popup_b4b58a280378475db068ac85ba5fbebb.setContent(html_afe44ca9662e42f1bb607645fb2ef0d3);
+        
+
+        circle_marker_b9fb6376cb14411186027efafaed1b4d.bindPopup(popup_b4b58a280378475db068ac85ba5fbebb)
+        ;
+
+        
+    
+    
+            var circle_marker_98d558d755ea48c2b816981c131347c2 = L.circleMarker(
+                [43.6534817, -79.3839347],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 100, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(feature_group_7724a59efcf049348e7034e0216cb576);
+        
+    
+        var popup_57d7262b85bf4819b98374dd2b9cf7b6 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_7bb250cb58ba46eba70cc03c31598061 = $(`<div id="html_7bb250cb58ba46eba70cc03c31598061" style="width: 100.0%; height: 100.0%;">Chrystia Freeland</div>`)[0];
+            popup_57d7262b85bf4819b98374dd2b9cf7b6.setContent(html_7bb250cb58ba46eba70cc03c31598061);
+        
+
+        circle_marker_98d558d755ea48c2b816981c131347c2.bindPopup(popup_57d7262b85bf4819b98374dd2b9cf7b6)
+        ;
+
+        
+    
+    
+            var circle_marker_b60f11b3fb2e474892f8e67ac6d51852 = L.circleMarker(
+                [32.3293809, -83.1137366],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 100, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(feature_group_7724a59efcf049348e7034e0216cb576);
+        
+    
+        var popup_75afc625f9894df398907e42e43dd2bc = L.popup({"maxWidth": "100%"});
+
+        
+            var html_a33922f94ea047afb906d057a2f13419 = $(`<div id="html_a33922f94ea047afb906d057a2f13419" style="width: 100.0%; height: 100.0%;">Salome Zourabichvili</div>`)[0];
+            popup_75afc625f9894df398907e42e43dd2bc.setContent(html_a33922f94ea047afb906d057a2f13419);
+        
+
+        circle_marker_b60f11b3fb2e474892f8e67ac6d51852.bindPopup(popup_75afc625f9894df398907e42e43dd2bc)
+        ;
+
+        
+    
+    
+            var circle_marker_482138f677bd4edca7aba788f23e9e5b = L.circleMarker(
+                [38.8950368, -77.0365427],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 100, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(feature_group_7724a59efcf049348e7034e0216cb576);
+        
+    
+        var popup_7e92e238d4ed4cb4814f099177f76a77 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_c55e721a11074430a01bff7be0891c2c = $(`<div id="html_c55e721a11074430a01bff7be0891c2c" style="width: 100.0%; height: 100.0%;">Kristalina Georgieva</div>`)[0];
+            popup_7e92e238d4ed4cb4814f099177f76a77.setContent(html_c55e721a11074430a01bff7be0891c2c);
+        
+
+        circle_marker_482138f677bd4edca7aba788f23e9e5b.bindPopup(popup_7e92e238d4ed4cb4814f099177f76a77)
+        ;
+
+        
+    
+    
+            var circle_marker_8a7c2c83fa224357a720ae1c875e835f = L.circleMarker(
+                [55.3500003, 23.7499997],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 100, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(feature_group_7724a59efcf049348e7034e0216cb576);
+        
+    
+        var popup_c1ea85dd96da42c0b3770418003d9e8d = L.popup({"maxWidth": "100%"});
+
+        
+            var html_5032f1f8848c4a62bd26d8fc0117e447 = $(`<div id="html_5032f1f8848c4a62bd26d8fc0117e447" style="width: 100.0%; height: 100.0%;">Ingrida Šimonytė</div>`)[0];
+            popup_c1ea85dd96da42c0b3770418003d9e8d.setContent(html_5032f1f8848c4a62bd26d8fc0117e447);
+        
+
+        circle_marker_8a7c2c83fa224357a720ae1c875e835f.bindPopup(popup_c1ea85dd96da42c0b3770418003d9e8d)
+        ;
+
+        
+    
+    
+            var circle_marker_abda76aa084d4980a3057cf497cee874 = L.circleMarker(
+                [51.0, 10.0],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 100, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(feature_group_7724a59efcf049348e7034e0216cb576);
+        
+    
+        var popup_d7db8004b2e74563ab5f1081431bdd28 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_d08631286b2e4505aa951be6be2bfb52 = $(`<div id="html_d08631286b2e4505aa951be6be2bfb52" style="width: 100.0%; height: 100.0%;">Antonio López-Istúriz White</div>`)[0];
+            popup_d7db8004b2e74563ab5f1081431bdd28.setContent(html_d08631286b2e4505aa951be6be2bfb52);
+        
+
+        circle_marker_abda76aa084d4980a3057cf497cee874.bindPopup(popup_d7db8004b2e74563ab5f1081431bdd28)
+        ;
+
+        
+    
+    
+            var circle_marker_24f9fd87fddc43ae8ed33ade10b88637 = L.circleMarker(
+                [50.56553125, 6.253540740478259],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 100, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(feature_group_7724a59efcf049348e7034e0216cb576);
+        
+    
+        var popup_d06e09ef90814aaaa5fab1409702ec1d = L.popup({"maxWidth": "100%"});
+
+        
+            var html_6ffbc886220e4dbd874ac0313203dbc8 = $(`<div id="html_6ffbc886220e4dbd874ac0313203dbc8" style="width: 100.0%; height: 100.0%;">Armin Laschet</div>`)[0];
+            popup_d06e09ef90814aaaa5fab1409702ec1d.setContent(html_6ffbc886220e4dbd874ac0313203dbc8);
+        
+
+        circle_marker_24f9fd87fddc43ae8ed33ade10b88637.bindPopup(popup_d06e09ef90814aaaa5fab1409702ec1d)
+        ;
+
+        
+    
+    
+            var circle_marker_0f3c4dc3584c470ab672ef1161ce2155 = L.circleMarker(
+                [50.4500336, 30.5241361],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 100, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(feature_group_7724a59efcf049348e7034e0216cb576);
+        
+    
+        var popup_d32402d0764e4febb2c05c5b34ff63f0 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_194adf54206c4c718ce3b7565ebbcd56 = $(`<div id="html_194adf54206c4c718ce3b7565ebbcd56" style="width: 100.0%; height: 100.0%;">Pavlo Klimkin</div>`)[0];
+            popup_d32402d0764e4febb2c05c5b34ff63f0.setContent(html_194adf54206c4c718ce3b7565ebbcd56);
+        
+
+        circle_marker_0f3c4dc3584c470ab672ef1161ce2155.bindPopup(popup_d32402d0764e4febb2c05c5b34ff63f0)
+        ;
+
+        
+    
+    
+            var circle_marker_b558f02830484cbc8db1d92ac0b037d2 = L.circleMarker(
+                [44.8178131, 20.4568974],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 100, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(feature_group_7724a59efcf049348e7034e0216cb576);
+        
+    
+        var popup_dd03cf3f3cb34d149ba4c22e80c2666c = L.popup({"maxWidth": "100%"});
+
+        
+            var html_60842eb8d9854162b7e3c6a8a60b177d = $(`<div id="html_60842eb8d9854162b7e3c6a8a60b177d" style="width: 100.0%; height: 100.0%;">Александар Вучић</div>`)[0];
+            popup_dd03cf3f3cb34d149ba4c22e80c2666c.setContent(html_60842eb8d9854162b7e3c6a8a60b177d);
+        
+
+        circle_marker_b558f02830484cbc8db1d92ac0b037d2.bindPopup(popup_dd03cf3f3cb34d149ba4c22e80c2666c)
+        ;
+
+        
+    
+    
+            var circle_marker_a4f65c6e5c06494781dca695777cfded = L.circleMarker(
+                [50.0972482, 19.9621674],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 100, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(feature_group_7724a59efcf049348e7034e0216cb576);
+        
+    
+        var popup_a84a732bb49b47348c25a05671c88766 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_1759010c9ecf4bf0a893c64a7aee7702 = $(`<div id="html_1759010c9ecf4bf0a893c64a7aee7702" style="width: 100.0%; height: 100.0%;">Andrzej Duda</div>`)[0];
+            popup_a84a732bb49b47348c25a05671c88766.setContent(html_1759010c9ecf4bf0a893c64a7aee7702);
+        
+
+        circle_marker_a4f65c6e5c06494781dca695777cfded.bindPopup(popup_a84a732bb49b47348c25a05671c88766)
+        ;
+
+        
+    
+</script>
