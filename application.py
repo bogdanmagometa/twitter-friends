@@ -12,12 +12,29 @@ def index():
 def friends():
     username = request.form.get('username')
 
-    user_exists = create_map_for_user(username)
+    if username.startswith('@'):
+        username = username[1:]
 
-    if user_exists:
-        return render_template("map.html")
+    if is_valid(username):
+        world_map = create_map_for_user(username)
+
+        if world_map is not None:
+            return world_map
 
     return render_template('failure.html', username=username)
+
+
+def is_valid(username: str) -> bool:
+    """
+    Return True if specified username is valid, False otherwise.
+    """
+
+    for char in username:
+        if (97 <= ord(char) <= 122) or (65 <= ord(char) <= 90) or char == '_':
+            continue
+        return False
+
+    return True
 
 
 if __name__ == "__main__":

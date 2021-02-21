@@ -1,4 +1,5 @@
 from typing import Tuple
+from typing import Union
 
 import requests
 from geopy.geocoders import Nominatim
@@ -10,17 +11,17 @@ from pprint import pprint
 from hidden import get_keys
 
 
-def create_map_for_user(username: str) -> bool:
+def create_map_for_user(username: str) -> Union[str, None]:
     """
-    Save map to templates/map.html with the location of user specified by passed in username and his
-    friends marked on the map, if a specified user exists.
-    Return True if the user with specified username exists, False otherwise.
+    Return map in form of string containing html. There'are the locations of user specified by passed in
+    username and his friends marked on the map.
+    Return None if the user with specified username doesn't exist.
     """
 
     # get info about user and friends
     user = get_user_info(username)
     if user == None:
-        return False
+        return None
     friends = get_friends(username)
 
     print(f"Number of friends is {len(friends)}")
@@ -32,7 +33,7 @@ def create_map_for_user(username: str) -> bool:
         user_coords = get_coords_by_address(user['location'])
         world_map = folium.Map(location=user_coords, zoom_start=7)
         if user_coords:
-            fg_users.add_child(folium.Marker(popup=user['name'], location=user_coords, tooltip="tooltip text"))
+            fg_users.add_child(folium.Marker(popup=user['name'], location=user_coords))
     else:
         print('no location for entered user')
         world_map = folium.Map()
@@ -50,9 +51,7 @@ def create_map_for_user(username: str) -> bool:
 
     world_map.add_child(fg_users)
 
-    world_map.save('templates/map.html')
-
-    return True
+    return world_map._repr_html_()
 
 
 def get_coords_by_address(address: str) -> Tuple[float, float]:
@@ -79,7 +78,7 @@ def get_friends(username: str) -> dict:
     url = "https://api.twitter.com/1.1/friends/list.json"
 
     headers = {'Authorization': "Bearer " + get_keys()['Bearer token']}
-    query = {'screen_name': username, 'count': 30}
+    query = {'screen_name': username, 'count': 20}
 
     response = requests.get(url=url, headers=headers, params=query)
 
@@ -89,7 +88,7 @@ def get_friends(username: str) -> dict:
 def get_user_info(username: str) -> dict:
     """
     Return information about profile of the user specified by passed in username.
-    Return None if the user with specified username doesn't exist.
+    Return None if the user with specified username doesn't exist or some there's another problem.
     """
 
     url = "https://api.twitter.com/2/users/by/username/" + username
@@ -99,7 +98,9 @@ def get_user_info(username: str) -> dict:
 
     response = requests.get(url, headers=headers, params=query)
 
-    if response.status_code == 200:
+    json_dict = response.json()
+
+    if 'data' in json_dict:
         return response.json()['data']
 
     return None
