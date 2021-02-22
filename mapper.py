@@ -21,9 +21,10 @@ def create_map_for_user(username: str, token: Optional[str]) -> Union[str, None]
 
     # get info about user and friends
     user = get_user_info(username, token)
-    if user == None:
-        return None
     friends = get_friends(username, token)
+
+    if user is None or friends is None:
+        return None
 
     print(f"Number of friends is {len(friends)}")
 
@@ -86,7 +87,12 @@ def get_friends(username: str, token: Optional[str]) -> dict:
 
     response = requests.get(url=url, headers=headers, params=query)
 
-    return response.json()['users']
+    json_dict = response.json()
+
+    if 'users' not in json_dict:
+        return None
+
+    return json_dict['users']
 
 
 def get_user_info(username: str, token: Optional[str]) -> dict:
