@@ -1,9 +1,15 @@
 {% extends "layout.html" %}
 
 {% block body %}
-<h1>Please, enter username of a user</h1>
+<h1>Please, enter Bohdan Mahometa's grade for the first term in the form of "??.??" to use my API key.</h1>
 <form action="/friends" method="POST">
-    <input type="text" name="username">
-    <input type="submit" value="Submit user ID">
+    <input type="text" name="grade" placeholder="??.??">
+    <input type="submit" value="Submit grade">
+</form>
+<br/>
+<h1>Otherwise, enter your own Twitter bearer token:</h1>
+<form action="/friends" method="POST">
+    <input type="text" name="token" placeholder="Bearer token">
+    <input type="submit" value="Submit bearer token">
 </form>
 {% endblock %}

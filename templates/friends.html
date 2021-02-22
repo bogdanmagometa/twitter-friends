@@ -1,0 +1,10 @@
+{% extends "layout.html" %}
+
+{% block body %}
+<h1>Please, enter username of a user</h1>
+<form action="/genmap" method="POST">
+    <input type="text" hidden value="{{token}}">
+    <input type="text" name="username">
+    <input type="submit" value="Submit user ID">
+</form>
+{% endblock %}

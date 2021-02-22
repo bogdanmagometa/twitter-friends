@@ -1,5 +1,6 @@
 from typing import Tuple
 from typing import Union
+from typing import Optional
 
 import requests
 from geopy.geocoders import Nominatim
@@ -11,7 +12,7 @@ from pprint import pprint
 from hidden import get_keys
 
 
-def create_map_for_user(username: str) -> Union[str, None]:
+def create_map_for_user(username: str, token: Optional[str]) -> Union[str, None]:
     """
     Return map in form of string containing html. There'are the locations of user specified by passed in
     username and his friends marked on the map.
@@ -68,7 +69,7 @@ def get_coords_by_address(address: str) -> Tuple[float, float]:
         return None
 
 
-def get_friends(username: str) -> dict:
+def get_friends(username: str, token: Optional[str]) -> dict:
     """
     Get list of user objects that are friends of the user specified by passed in username.
 
@@ -77,7 +78,10 @@ def get_friends(username: str) -> dict:
 
     url = "https://api.twitter.com/1.1/friends/list.json"
 
-    headers = {'Authorization': "Bearer " + get_keys()['Bearer token']}
+    if not token:
+        token = get_keys()['Bearer token']
+
+    headers = {'Authorization': "Bearer " + token}
     query = {'screen_name': username, 'count': 20}
 
     response = requests.get(url=url, headers=headers, params=query)
@@ -85,7 +89,7 @@ def get_friends(username: str) -> dict:
     return response.json()['users']
 
 
-def get_user_info(username: str) -> dict:
+def get_user_info(username: str, token: Optional[str]) -> dict:
     """
     Return information about profile of the user specified by passed in username.
     Return None if the user with specified username doesn't exist or some there's another problem.
@@ -93,7 +97,10 @@ def get_user_info(username: str) -> dict:
 
     url = "https://api.twitter.com/2/users/by/username/" + username
 
-    headers = {'Authorization': "Bearer " + get_keys()['Bearer token']}
+    if not token:
+        token = get_keys()['Bearer token']
+
+    headers = {'Authorization': "Bearer " + token}
     query = {'user.fields': "location"}
 
     response = requests.get(url, headers=headers, params=query)
