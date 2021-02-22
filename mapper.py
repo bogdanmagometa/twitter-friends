@@ -20,10 +20,10 @@ def create_map_for_user(username: str, token: Optional[str]) -> Union[str, None]
     """
 
     # get info about user and friends
-    user = get_user_info(username)
+    user = get_user_info(username, token)
     if user == None:
         return None
-    friends = get_friends(username)
+    friends = get_friends(username, token)
 
     print(f"Number of friends is {len(friends)}")
 
