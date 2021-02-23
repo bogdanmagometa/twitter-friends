@@ -58,4 +58,4 @@ def is_valid(username: str) -> bool:
 
 
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=8080, debug=True)
+    app.run(host="0.0.0.0", port=55000, debug=True)

@@ -6,6 +6,7 @@ import requests
 from geopy.geocoders import Nominatim
 from geopy.exc import GeocoderUnavailable
 import folium
+from folium.plugins import MarkerCluster
 
 from pprint import pprint
 
@@ -28,14 +29,19 @@ def create_map_for_user(username: str, token: Optional[str]) -> Union[str, None]
 
     print(f"Number of friends is {len(friends)}")
 
-    fg_users = folium.FeatureGroup(name="User and his friends")
+    fg_users = folium.FeatureGroup(name="Without clusters", show=False)
+    marker_cluster = MarkerCluster(name="With clusters")
 
     # add user's marker to map if possible
     if 'location' in user:
         user_coords = get_coords_by_address(user['location'])
         world_map = folium.Map(location=user_coords, zoom_start=7)
         if user_coords:
-            fg_users.add_child(folium.Marker(popup=user['name'], location=user_coords))
+            icon = folium.Icon(icon="user", color='red')
+            marker_cluster.add_child(folium.Marker(popup=user['name'], location=user_coords,
+                                                        icon=icon))
+            fg_users.add_child(folium.Marker(popup=user['name'], location=user_coords,
+                                                        icon=icon))
     else:
         print('no location for entered user')
         world_map = folium.Map()
@@ -48,10 +54,17 @@ def create_map_for_user(username: str, token: Optional[str]) -> Union[str, None]
         print(f"location of {friend['name']} is {friend['location']}")
         friend_coords = get_coords_by_address(friend['location'])
         if friend_coords:
-            fg_users.add_child(folium.CircleMarker(popup=friend['name'], location=friend_coords,
-                                                                fill_color='red', fill_opacity=100))
+            image_url = friend["profile_image_url_https"].replace("_normal", "")
+            icon = folium.features.CustomIcon(image_url, icon_size=(60,60))
+            marker_cluster.add_child(folium.Marker(popup=friend['name'], location=friend_coords,
+                                    icon=icon))
+            icon = folium.features.CustomIcon(image_url, icon_size=(60,60))
+            fg_users.add_child(folium.Marker(popup=friend['name'], location=friend_coords,
+                                    icon=icon))
 
     world_map.add_child(fg_users)
+    world_map.add_child(marker_cluster)
+    world_map.add_child(folium.LayerControl())
 
     return world_map._repr_html_()
 
@@ -82,8 +95,10 @@ def get_friends(username: str, token: Optional[str]) -> dict:
     if not token:
         token = get_keys()['Bearer token']
 
+    NUM_FRIENDS = 20
+
     headers = {'Authorization': "Bearer " + token}
-    query = {'screen_name': username, 'count': 20}
+    query = {'screen_name': username, 'count': NUM_FRIENDS}
 
     response = requests.get(url=url, headers=headers, params=query)
 
