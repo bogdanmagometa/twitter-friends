@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request
-from mapper import create_map_for_user
+from mapper import create_map_for_user, is_valid
 
 app = Flask(__name__)
 
@@ -42,19 +42,6 @@ def friends():
         return render_template("friends.html", token=token)
     else:
         return 'Grade is not correct and Bearer token is unspecified.'
-
-
-def is_valid(username: str) -> bool:
-    """
-    Return True if specified username is valid, False otherwise.
-    """
-
-    for char in username:
-        if (97 <= ord(char) <= 122) or (65 <= ord(char) <= 90) or char == '_':
-            continue
-        return False
-
-    return True
 
 
 if __name__ == "__main__":

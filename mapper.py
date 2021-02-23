@@ -104,10 +104,11 @@ def get_friends(username: str, token: Optional[str]) -> dict:
 
     json_dict = response.json()
 
-    if 'users' not in json_dict:
-        return None
+    if 'users' in json_dict:
+        return json_dict['users']
 
-    return json_dict['users']
+    return None
+
 
 
 def get_user_info(username: str, token: Optional[str]) -> dict:
@@ -132,3 +133,23 @@ def get_user_info(username: str, token: Optional[str]) -> dict:
         return response.json()['data']
 
     return None
+
+
+def is_valid(username: str) -> bool:
+    """
+    Return True if specified username is valid, False otherwise.
+
+    >>> is_valid("BarackObama")
+    True
+    >>> is_valid("b.23")
+    False
+    >>> is_valid("Helloworld ")
+    False
+    """
+
+    for char in username:
+        if (97 <= ord(char) <= 122) or (65 <= ord(char) <= 90) or char == '_':
+            continue
+        return False
+
+    return True
