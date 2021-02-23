@@ -34,9 +34,9 @@ def genmap():
 def friends():
     token = request.form.get("token")
     grade = request.form.get("grade")
-    grade = grade.strip()
 
     if grade in FIRST_TERM_GRADE:
+        grade = grade.strip()
         return render_template("friends.html", token=grade)
     elif token:
         return render_template("friends.html", token=token)
